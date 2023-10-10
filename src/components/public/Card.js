@@ -1,21 +1,20 @@
 import React from 'react'
 
-export const Card = () => {
+export const Card = ({personaje}) => { 
+
+
+
     return (
 <div>
     <div class="col">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm ">
+        <img width="100%" src={personaje.image} alt="imagen"/>
         <div class="card-body">
-                    <img src='' alt=''/>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-body-secondary">9 mins</small>
-                </div>
-            </div>
+                    <h3 class="card-text">{personaje.name}</h3>
+                    <p>Status: {personaje.status}</p>
+                    <p>Species: {personaje.species}</p>
+                    <p>Gender: {personaje.gender}</p>
+        </div>
         </div>
     </div>
 </div>
